@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>kombinationsselektorer</title>
+		<style>
+			#a > p 
+			{
+				color: red; 
+			}
+			#a span 
+			{
+				color: blue;
+			}
+			#a > .bb 
+			{
+				color: green;
+			}
+			#a > .bb + p 
+			{
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>
+			kombinationsselektorer
+		</h1>
+		<div id="a">
+			<p>
+				Röd text.
+			</p>
+			<p class="bb">
+				Grön text.
+			</p>
+			<p>
+				Svart text.
+				<span>
+					Blå text.
+				</span>
+			</p>
+		</div>
+	</body>
+</html>

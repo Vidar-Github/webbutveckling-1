@@ -1,119 +1,198 @@
 @charset "UTF-8";
-/*
-==================================================================================
-Global rules
-==================================================================================
-*/
+
 html {
-    margin: 2%;
+	margin: 2%;
 }
+
 body {
-    margin: auto;
-    max-width: 860px;
-    /* Lägg till deklarationer här */
+	margin: auto;
+	max-width: 860px;
+	font-family: "Helvetica Neue", "Liberation Sans", Calibri, Arial, sans-serif; 
+	font-size: 100%;
 }
-/*
-section, header, footer, nav, div[role=main] {
-    outline: 1px solid red;
-}
-*/
-/*
-==================================================================================
-Rules for reusable components
-==================================================================================
-*/
 
-/* dborder ska vara här - avsnitt 11.7 */
-
-/*
-==================================================================================
-Page header, all pages
-==================================================================================
-*/
 header {
-    /* text-align: center; */
-}
-/*
-==================================================================================
-Page footer rules
-==================================================================================
-*/
-
-/* TODO Avsnitt 5.2 */
-
-/*
-==================================================================================
-Main site navigation
-==================================================================================
-*/
-
-/* Alla regler för .menu med relaterade element */
-
-/* TODO Avsnitt 5.2, 5.4, 5.5, 5.6, 11.4.2 */
-
-
-/*
-==================================================================================
-Start page rules
-==================================================================================
-*/
-
-/* Regler med klassen .startpage, avsnitt 5.2, 5.3 och 5.8 */
-
-/*
-==================================================================================
-Subpages
-==================================================================================
-*/
-
-/* TODO Avsnitt 11.4.1, 11.6,  */
-
-/*
-==================================================================================
-Tables
-==================================================================================
-*/
-
-/* TODO Avsnitt 12.3 */
-
-/*
-==================================================================================
-Nivo Slider
-==================================================================================
-*/
-
-/* TODO Avsnitt 14.7.4 */
-
-/*
-==================================================================================
-Forms (contact page)
-==================================================================================
-*/
-
-/* TODO Avsnitt 13.8.2 */
-
-/*
-==================================================================================
-Blog page, show and edit
-==================================================================================
-*/
-
-/* Detta kommer i boken Webbserverprogrammering 1 */
-
-/*
-==================================================================================
-Adaptive design
-==================================================================================
-*/
-.tagline button {
-    /* display: none; */ /* Aktivera */
-}
-@media (max-width: 750px) {
-    .hwrap > a {
-        margin-right: 25px;
-    }
-    /* Lägg till regler enligt kapitel 15 */
+	text-align: center;
 }
 
-/* TODO Avsnitt 15.4.2 + arbetsboken */
+.startpage h1 {
+	font-size: 500%;
+}
 
+.tagline {
+	font-size: 120%;
+	padding: 0.5em;
+	border-top: 3px double #00AF64;
+	border-bottom: 3px double #00AF64;
+	margin: 1em 0;
+}
+
+.menu > li,
+
+.menu > h2 {
+	margin: 0 0 1em;
+	padding: 2em 0;
+	background-color: #F5F5F5;
+	text-align: center;
+	box-shadow: inset 0 0 20px #007241;
+	border-radius: 50%;
+	font-family: 'Merienda One', cursive;
+}
+
+footer {
+	margin-top: 3em;
+	text-align: center;
+	color: #999;
+}
+
+.startpage {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.startpage header, 
+
+.startpage footer {
+	flex: 0 0 100%;
+}
+
+.startpage section {
+	flex: 0 0 22%;	
+}
+
+.menu a:link,
+
+.menu a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+.menu a:focus,
+
+.menu a:hover {
+	text-decoration: underline;
+	color: #A62F00;
+}
+
+.menu a:active {
+	text-decoration: underline;
+	color: #FF4900;
+}
+
+h1 {
+	font-family: 'Merienda One', cursive;
+}
+
+h1::first-Letter {
+	color: #00AF64;
+}
+
+.startpage .Logo {
+	width: 235px;
+	height: 198px;
+} 
+
+.hwrap {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center
+}
+
+.hwrap > a {
+	margin-right: 30px;
+}
+
+.subpage .Logo {
+	width: 146px;
+	height: 123px;
+}
+
+.subpage h1 {
+	font-size: 2,6rem;
+}
+
+h1 > span {
+	color: #a62f00;
+}
+
+.menu {
+	margin: 1em 0;
+	padding: 0;
+}
+
+.menu li {
+	margin: 0 0 1rem;
+	list-style: none;
+}
+
+.subpage .hwrap {
+	justify-content: space-between;
+}
+
+.subpage .hwrap > a, nav{
+	flex: 0 1 20%;
+	min-width: 146px;
+	margin-right: 10px;
+	outline: 1px solid;
+}
+
+.subpage .hwrap > h1, div[role=main] {
+	flex: 1 1 300px;
+}
+
+.dborder {
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
+article {
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+	border-bottom: 3px double #00af64;
+}
+
+article:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+fieldset {
+	padding: 1em;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+legend {
+	font-size: larger;
+}
+form p {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+label {
+	flex: 0 1 10ch;
+	text-align: right;
+	padding-right: 1ch;
+}
+.reqfield {
+	flex: 0 0 2ch;
+	order: 1;
+	text-align: center;
+	padding-right: 0;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+	flex: 1 1 25ch;
+	max-width: 300px;
+}
+textarea {
+	height: 5em;
+	resize: vertical;
+}
+input[type="submit"]
+{
+	display: block;
+	margin: auto;
+}

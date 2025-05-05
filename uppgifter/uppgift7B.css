@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+body
+{
+	background-color: silver;
+}
+em 
+{
+	font-style: normal;
+	font-weight: bold;
+}
+strong
+{
+	font-weight: normal;
+	font-style: italic;
+}
